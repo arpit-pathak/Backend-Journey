@@ -92,6 +92,7 @@ app.post("/login", async (req, res) => {
       user.password = undefined;    //because we dont want to send password to frontend
       user.token = token;
 
+      
       const options = {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
         httpOnly : true
