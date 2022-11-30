@@ -124,5 +124,17 @@ app.post("/login", async (req, res) => {
   }
 });
 
+app.get("/dashboard", auth, (req, res) => {
+  res.send('Welcome to Dashboard')
+})
+
+app.get("/profile", auth, (req, res) => {
+  // access to req.user = id email
+
+  // based on id, query to DB and get all information of user  - findone({id})
+
+  // send a json response with all data
+
+})
 
 module.exports = app;
